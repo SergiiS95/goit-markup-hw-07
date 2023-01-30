@@ -2,6 +2,90 @@
   .container {
     width: 768px;
   }
+
+  .header-logo {
+    margin-right: 123px;
+  }
+
+  .header-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  .header-item {
+    padding-top: 24px;
+    padding-bottom: 21px;
+    display: flex;
+  }
+
+  .header-link {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--first-title-color);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+  .header-link:hover,
+  .header-link:focus {
+    color: #434455;
+  }
+  .header-link:active {
+    color: var(--first-btn-color);
+  }
+  .header-link.current {
+    color: #404bbf;
+  }
+  .header-link.current::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #404bbf;
+    border-radius: 2px;
+    bottom: -24px;
+    left: 0;
+  }
+
+  .header-address {
+    display: block;
+    margin-left: auto;
+    padding-top: 20px;
+    padding-bottom: 8px;
+    margin-left: auto;
+  }
+  .header-address-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    flex-direction: column;
+  }
+  .header-address-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #434455;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .header-address-link:hover,
+  .header-adres-link:focus {
+    color: var(--first-btn-color);
+  }
+  .menu-open {
+    display: none;
+  }
+
   .hero {
     max-width: 768px;
   }
@@ -17,9 +101,51 @@
     row-gap: 72px;
     column-gap: 24px;
   }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
   .benefits-item {
     width: calc((100% - 24px) / 2);
+  }
+  .team {
+    padding-bottom: 104px;
+  }
+  .team-list {
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+
+  .customers-list {
+    column-gap: 24px;
+  }
+
+  .customers-item {
+    width: 168px;
+  }
+  .footer-list {
+    gap: 24px;
+    justify-content: start;
+  }
+  .footer-logo {
+    justify-content: left;
+  }
+  .footer-title {
+    text-align: left;
+  }
+
+  .footer-input-text {
+    text-align: left;
+  }
+  .footer-input {
+    display: inline;
+    width: 264px;
+    margin-right: 24px;
+  }
+  .footer-btn {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .customers .container,
+  .footer .container {
+    width: 584px;
   }
 }

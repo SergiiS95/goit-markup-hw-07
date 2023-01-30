@@ -2,6 +2,30 @@
   .container {
     width: 1158px;
   }
+
+  .header-logo {
+    margin-right: 76px;
+  }
+
+  .header-item {
+    padding-bottom: 27px;
+  }
+  .header-link.current::after {
+    bottom: -28px;
+  }
+  .header-address {
+    padding-bottom: 27px;
+  }
+  .header-address-list {
+    gap: 40px;
+    flex-direction: row;
+  }
+  .header-address-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
   .hero {
     padding-top: 188px;
     padding-bottom: 188px;
@@ -52,5 +76,40 @@
   .work-list {
     display: flex;
     gap: 24px;
+  }
+  .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .team-list {
+    gap: 24px;
+  }
+
+  .customers {
+    padding-top: 130px;
+    padding-bottom: 120px;
+  }
+
+  .customers-list {
+    gap: 24px;
+  }
+
+  .footer .container {
+    position: relative;
+  }
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .footer-list {
+    gap: 120px;
+    position: relative;
+  }
+
+  .footer-wrap {
+    position: absolute;
+    top: 0;
+    right: 15px;
   }
 }
