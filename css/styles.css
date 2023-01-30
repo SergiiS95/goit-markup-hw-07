@@ -24,6 +24,7 @@ ol {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -43,7 +44,6 @@ body {
   color: var(--first-title-color);
 }
 .container {
-  width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -171,21 +171,21 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-top: 112px;
+  padding-bottom: 112px;
+  max-width: 428px;
   text-align: center;
-  padding-top: 188px;
-  padding-bottom: 188px;
-  max-width: 1440px;
   margin: 0 auto;
 }
 
 .hero-title {
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
+  max-width: 319px;
+  margin-bottom: 72px;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--second-title-color);
-  max-width: 496px;
-  margin-bottom: 48px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -217,23 +217,17 @@ body {
 
 /*---------BENEFITS---------*/
 .benefits {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .benefits-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 .benefits-icon {
-  width: 264px;
-  height: 112px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f4f4fd;
-  border-radius: 4px;
-  margin-bottom: 8px;
+  display: none;
 }
 
 .icon-svg {
@@ -241,8 +235,8 @@ body {
 .benefits-item {
 }
 .benefits-title {
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--first-title-color);
   margin-bottom: 8px;
@@ -256,9 +250,9 @@ body {
 
 /*---------WORK---------*/
 .work {
-  padding-bottom: 120px;
+  display: none;
 }
-.work-title {
+/* .work-title {
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
@@ -270,10 +264,7 @@ body {
 .work-list {
   display: flex;
   gap: 24px;
-}
-
-.work-item {
-}
+} */
 
 /*--------TEAM---------*/
 .team {
