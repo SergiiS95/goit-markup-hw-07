@@ -26,7 +26,9 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+.no-scroll {
+  overflow: hidden;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -44,7 +46,7 @@ body {
   color: var(--first-title-color);
 }
 .container {
-  width: 428px;
+  /* width: 428px; */
   padding-left: 16px;
   padding-right: 16px;
   margin: 0 auto;
@@ -107,6 +109,120 @@ body {
 .menu-open-icon {
   stroke: rgba(46, 47, 66, 1);
 }
+.mob-menu {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
+.menu-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.menu-close:hover,
+.menu-close:focus {
+  background-color: #404bbf;
+  fill: #ffffff;
+}
+
+.mob-menu-list {
+}
+
+.mob-menu-item {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+  margin-bottom: 40px;
+}
+.mob-menu-link {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--first-title-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-menu-link:hover,
+.mob-menu-link:focus {
+  color: #404bbf;
+}
+.mob-menu-link.current {
+  color: #404bbf;
+}
+
+.menu-address-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  flex-direction: column;
+  margin-bottom: 48px;
+}
+
+.tel-link {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.11px;
+  text-transform: capitalize;
+  color: #4d5ae5;
+  margin-bottom: 40px;
+}
+
+.mail-link {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+.mob-menu-soc-list {
+  display: flex;
+  justify-content: space-between;
+}
+.mob-menu-soc-item {
+  width: 40px;
+  height: 40px;
+}
+.mob-menu-soc-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mob-menu-icon {
+  fill: #f4f4fd;
+}
 
 /*---------HERO---------*/
 
@@ -116,7 +232,7 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero\ bg.jpg);
+    url(../images/hero-bg-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -125,6 +241,17 @@ body {
   max-width: 428px;
   text-align: center;
   margin: 0 auto;
+}
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero-bg-mob\ 2x.jpg);
+  }
 }
 
 .hero-title {
@@ -476,18 +603,21 @@ body {
 /*--------PORTFOLIO---------*/
 
 .portfolio {
-  padding-top: 108px;
-  padding-bottom: 120px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 .portfolio-list-btn {
   display: flex;
-  justify-content: center;
-  margin-bottom: 72px;
+  justify-content: start;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 16px;
+  margin-bottom: 48px;
 }
-.portfolio-item-btn:nth-child(-n + 4) {
+/* .portfolio-item-btn:nth-child(-n + 4) {
   margin-right: 24px;
-}
+} */
 .portfolio-btn {
   font-family: "Roboto";
   font-style: normal;
@@ -519,11 +649,10 @@ body {
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
   row-gap: 48px;
 }
 .portfolio-item {
-  width: calc((100% - 48px) / 3);
+  max-width: 396px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
   transition-property: box-shadow;
   transition-duration: 250ms;
@@ -595,7 +724,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 408px;
+  max-width: 408px;
   min-width: none;
   min-height: 584px;
   transform: translate(-50%, -50%) scale(1) rotate(0);
@@ -606,6 +735,7 @@ body {
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: auto;
 }
 
 .backdrop.is-hidden .modal {

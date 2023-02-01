@@ -12,6 +12,9 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href=".//css/styles.css" />
+    <link rel="stylesheet" href=".//css/mobile.css" />
+    <link rel="stylesheet" href=".//css/tablet.css" />
+    <link rel="stylesheet" href=".//css/desktop.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,12 +32,10 @@
           >
           <ul class="header-list list">
             <li class="header-item">
-              <a href="./index.html" class="header-link link">Studio</a>
+              <a href="./index.html" class="header-link link current">Studio</a>
             </li>
             <li class="header-item">
-              <a href="./portfolio.html" class="header-link link current"
-                >Portfolio</a
-              >
+              <a href="./portfolio.html" class="header-link link">Portfolio</a>
             </li>
             <li class="header-item">
               <a href="" class="header-link link">Contacts</a>
@@ -57,6 +58,80 @@
             </li>
           </ul>
         </address>
+        <button class="menu-open" data-menu-open type="button">
+          <svg class="menu-open-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="mob-menu-top">
+          <button class="menu-close" data-menu-close type="button">
+            <svg class="menu-close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-Close"></use>
+            </svg>
+          </button>
+          <nav>
+            <ul class="mob-menu-list list">
+              <li class="mob-menu-item">
+                <a href="./index.html" class="mob-menu-link link">Studio</a>
+              </li>
+              <li class="mob-menu-item">
+                <a href="./portfolio.html" class="mob-menu-link link"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="mob-menu-item">
+                <a href="" class="mob-menu-link current link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="mob-contacts">
+          <ul class="menu-address-list list">
+            <li class="menu-address-item">
+              <a href="tel:+110001111111" class="tel-link link"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="menu-address-item">
+              <a href="mailto:info@devstudio.com" class="mail-link link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+
+          <ul class="mob-menu-soc-list list">
+            <li class="mob-menu-soc-item">
+              <a href="" class="mob-menu-soc-link link">
+                <svg class="mob-menu-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-menu-soc-item">
+              <a href="" class="mob-menu-soc-link link">
+                <svg class="mob-menu-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-menu-soc-item">
+              <a href="" class="mob-menu-soc-link link">
+                <svg class="mob-menu-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mob-menu-soc-item">
+              <a href="" class="mob-menu-soc-link link">
+                <svg class="mob-menu-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -300,26 +375,27 @@
               </li>
             </ul>
           </li>
-          <div class="footer-wrap">
-            <form>
-              <label for="email" class="footer-input-text">Subscribe</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="E-mail"
-                class="footer-input"
-              />
-              <button type="submit" class="footer-btn">
-                Subscribe
-                <svg class="footer-btn-icon" width="24" height="20">
-                  <use href="./images/icons.svg#icon-send"></use>
-                </svg>
-              </button>
-            </form>
-          </div>
         </ul>
+        <div class="footer-wrap">
+          <form>
+            <label for="email" class="footer-input-text">Subscribe</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+              class="footer-input"
+            />
+            <button type="submit" class="footer-btn">
+              Subscribe
+              <svg class="footer-btn-icon" width="24" height="20">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

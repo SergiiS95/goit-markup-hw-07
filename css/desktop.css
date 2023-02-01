@@ -32,7 +32,25 @@
     padding-top: 188px;
     padding-bottom: 188px;
     max-width: 1440px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero\ bg.jpg);
   }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-bg\ 2x.jpg);
+    }
+  }
+
   .hero-title {
     margin-bottom: 48px;
   }
@@ -113,5 +131,19 @@
     position: absolute;
     top: 0;
     right: 15px;
+  }
+  .portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
+  .portfolio-list-btn {
+    margin-bottom: 72px;
+  }
+
+  .portfolio-list {
+    row-gap: 48px;
+  }
+  .portfolio-item {
+    width: calc((100% - 48px) / 3);
   }
 }
