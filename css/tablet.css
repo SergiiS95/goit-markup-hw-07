@@ -109,6 +109,7 @@
     max-width: 496px;
     margin-bottom: 40px;
   }
+
   .benefits-list {
     display: flex;
     flex-wrap: wrap;
@@ -117,6 +118,9 @@
   }
   .benefits-item {
     width: calc((100% - 24px) / 2);
+  }
+  .benefits-title {
+    text-align: left;
   }
   .team {
     padding-bottom: 104px;

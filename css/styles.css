@@ -206,6 +206,7 @@ body {
 .mob-menu-soc-list {
   display: flex;
   justify-content: space-between;
+  max-width: 328px;
 }
 .mob-menu-soc-item {
   width: 40px;
@@ -316,6 +317,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--first-title-color);
   margin-bottom: 8px;
+  text-align: center;
 }
 .benefits-text {
   font-size: 16px;

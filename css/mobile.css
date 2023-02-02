@@ -8,4 +8,8 @@
   .tel-link {
     font-size: 36px;
   }
+  .mob-menu-soc-list {
+gap: 56px;
+  justify-content:flex-start;
+}
 }
